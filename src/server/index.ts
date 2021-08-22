@@ -6,8 +6,8 @@ import { listeners , status } from '../api/status'
 
 const mapping = [
     'dimmer',
+    'scene',
     'fade',
-    'scene'
 ]
 const lastChannels : number[] = []
 

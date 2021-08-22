@@ -21,18 +21,13 @@ export const getDmxServer = (settings: Partial<ApplicationSettings>, numChannels
         // dmx contains an ArtDmx object
         console.log(dmx.universe, dmx.data);
         if(_settings.artnetUniverse == dmx.universe) {
-            const channels = dmx.data.slice(Math.max(1, _settings.startChannel) - 1, numChannels)
+            const channels = dmx?.data?.slice(Math.max(1, _settings.startChannel) - 1, numChannels)
             callbacks.forEach(cb => cb(channels))
         }
     });
     console.log("[DMX] Listening")
     const reconnect = (settings: Partial<ApplicationSettings>) => {
         _settings = settings
-        // receiver = artnet.newReceiver(settings.artnet)
-        // receiver.on('data', function(data) {
-        //     console.log('DMX data:', data);
-        //     callbacks.forEach(cb => cb(data))
-        //   });
     }
 
     return {
