@@ -16,9 +16,9 @@ export interface ApplicationSettings extends Record<string, unknown> {
 
 export const settings : ApplicationSettings = {
     artnetUniverse: 0,
-    startChannel: 0,
+    startChannel: 1,
     fps: 50,
-    obsAddress: '127.0.0.1:4449',
+    obsAddress: '127.0.0.1:4444',
 }
 
 const callbacks : ((settings: ApplicationSettings) => void)[] = []
@@ -42,6 +42,6 @@ export const setSettings = (parts : Partial<ApplicationSettings>) : void => {
 
 if(fs.existsSync(settingsFilePath)) {
     const settingsRaw = fs.readFileSync(settingsFilePath, 'utf8')
-    // const settingsNew = JSON.parse(settingsRaw)
-    setSettings({})
+    const settingsNew = JSON.parse(settingsRaw)
+    setSettings(settingsNew)
 }
