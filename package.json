@@ -90,6 +90,7 @@
   "dependencies": {
     "artnet-protocol": "^0.2.1",
     "axios": "^0.21.1",
+    "bufferutil": "^4.0.3",
     "clsx": "^1.1.1",
     "copy-webpack-plugin": "^6.2.1",
     "dmxnet": "^0.7.0",
@@ -101,6 +102,7 @@
     "react-dom": "^17.0.2",
     "readable-stream": "^3.6.0",
     "rimraf": "^3.0.2",
+    "utf-8-validate": "^5.0.5",
     "winston": "=3.1.0"
   }
 }
