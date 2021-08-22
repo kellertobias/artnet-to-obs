@@ -17,7 +17,7 @@
     "name": "Tobias S. Keller",
     "email": "tobias.s.keller@gmail.com"
   },
-  "license": "GNU GPLv3",
+  "license": "MIT",
   "config": {
     "forge": {
       "packagerConfig": {},
